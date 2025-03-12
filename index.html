@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrowserBot web components</title>
-</head>
-<body>
-    <test-component name="Pippo"></test-component>
-    <test2-component name="Pluto"></test2-component>
-    <p>This section is not affected by the component styles</p>
-    <script type="module" src="src/test/test.component.ts"></script>
-    <script type="module" src="src/test2/test2.component.ts"></script>
-</body>
+    <title>Lit + Tailwind template</title>
+    <link rel="stylesheet" href="./src/global.css" />
+    <script type="module" src="./src/material-container.ts"></script>
+    <script type="module" src="./src/custom-button.ts"></script>
+  </head>
+  <body class="text-sm">
+    <div class="space-y-2 text-center">
+      <material-container class="block mt-14 mx-auto w-fit">
+        <h2 class="font-bold text-xl">Lit + Tailwind template</h2>
+      </material-container>
+
+      <div>Unstyled element</div>
+      <custom-button name="Custom button" class="inline-block"></custom-button>
+    </div>
+  </body>
 </html>
